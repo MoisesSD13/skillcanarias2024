@@ -35,6 +35,7 @@ header h1, a{
 }
 
 .main-container{
+    width: fit-content;
     height: auto;
     width: 100%;
     display: flex;
@@ -42,7 +43,6 @@ header h1, a{
 }
 
 .cards-container{
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -54,6 +54,7 @@ header h1, a{
     padding: 15px;
     margin-bottom: 50px;    
     box-shadow: 2px 5px 15px rgb(145, 129, 77);
+    width: 750;
 }
 
 .card img{
@@ -83,4 +84,22 @@ header h1, a{
 .card-description {
     font-size: large;
     line-height: 50px;
+}
+@media screen and (max-width: 900px) {
+    .texto-imagen{
+        display: flex;
+        flex-direction: column;
+    }
+    .card img {
+        width: 250px;
+    }
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    header a{
+        user-select: none;
+        padding: 0;
+        margin: 0;
+    }
 }

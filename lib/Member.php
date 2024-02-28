@@ -55,7 +55,6 @@ class Member
                 $password = $_POST["password"];
             }
             $loginPassword = 0;
-            echo $memberRecord[0]["contrasenaUsuario"];
             if (password_verify($password, $memberRecord[0]["contrasenaUsuario"])) {
                 $loginPassword = 1;
             }
