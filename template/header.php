@@ -16,5 +16,5 @@
         </div>
         <a href="./index.php">Inicio</a>
         <a href="./login.php">Iniciar sesión</a>
-        <a href="./">Registrarse</a>
+        <a href="./register.php">Registrarse</a>
     </header>
