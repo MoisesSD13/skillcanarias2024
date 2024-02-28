@@ -69,7 +69,7 @@ class Member
             $url = "index.php";
             header("Location: $url");
         } else if ($loginPassword == 0) {
-            $loginStatus = "Invalid username or password.";
+            $loginStatus = "Nombre o contraseña incorrectos.";
             return $loginStatus;
         }
     }
