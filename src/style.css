@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     background-color: rgb(255, 238, 218);
     font-family: Nunito, sans-serif;
+    user-select: none;
 }
 
 header {
