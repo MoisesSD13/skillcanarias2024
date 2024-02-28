@@ -48,7 +48,13 @@
                             <input type="password" class="form-control" placeholder="password"
                                 name="password">
                         </div>
-
+                        <div class="input-group form-group mt-3">
+                            <div class="bg-secondary rounded-start">
+                                <span class="m-3"><i class="fas fa-key mt-2"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="email"
+                                name="email">
+                        </div>
                         <div class="form-group mt-3">
                             <input type="submit" value="Register"
                                 class="btn bg-secondary float-end text-white w-100"
