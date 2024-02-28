@@ -48,18 +48,14 @@ class Member
     public function loginMember()
     {
         $memberRecord = $this->getMember($_POST["username"]);
+        $loginPassword = 0;
+        $password = 0;
         if (! empty($memberRecord)) {
             if (! empty($_POST["password"])) {
                 $password = $_POST["password"];
             }
-            $query = 'SELECT contrasenaUsuario FROM usuario where nombreUsuario = ?';
-            $paramType = 's';
-            $paramValue = array(
-                $_POST["username"]
-            );
-            $memberRecord = $this->ds->select($query, $paramType, $paramValue);
             $loginPassword = 0;
-            if (password_verify($password, $memberRecord[0]["contrasenaUsuario"])) {
+            if (strcmp($password, $memberRecord[1])) {
                 $loginPassword = 1;
             }
         } else {
