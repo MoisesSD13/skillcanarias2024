@@ -79,7 +79,9 @@
                 <img src="./images/sala6/banquet-453799_640.jpg" alt="Imagen de sala 6">
                 <div class="auxiliar-card">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nobis ad explicabo natus exercitationem dolor minus provident tempora hic veritatis iste facilis asperiores sed doloremque error ut impedit voluptate deleniti!
+                        <strong>Nombre:</strong> Carpa Jiloro.<br>
+                        <strong>Aforo Máximo:</strong> 102.<br>
+                        <strong>Aforo Mínimo:</strong> 70.
                     </p>
                     <a href="./">Reservar sala</a>
                 </div>
