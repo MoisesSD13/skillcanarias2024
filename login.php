@@ -32,28 +32,28 @@ if (! empty($_POST["login-btn"])) {
             <form name="login" action="" method="post">
                 <h1>Iniciar sesion</h1>
                 <div class="">
-                    <input type="text" class="username" placeholder="username"
-                        name="username">
+                    <input type="text" class="username" placeholder="Nombre de Usuario"
+                        name="username" required>
                 </div>
                 <div class="">
                     <div class="">
                         <span class=""><i class=""></i></span>
                     </div>
-                    <input type="password" class="" placeholder="password"
-                        name="password">
+                    <input type="password" class="" placeholder="Contraseña"
+                        name="password" required>
                 </div>
                 <div class="">
-                    <input type="submit" value="Login"
+                    <input type="submit" value="Iniciar Sesion"
                         class="loginButton"
                         name="login-btn">
                 </div>
             </form>
             <?php if(!empty($loginResult)){?>
-                <div class=""><?php echo $loginResult;?></div>
+                <div class="error"><?php echo $loginResult;?></div>
             <?php }?>
         <div class="">
             <div class="">
-                <div class="">If you are not a registered user, <a href="./register.php">click here</a>.</div>
+                <div class="">Si no tienes una cuenta, <a href="./register.php">pulsa aquí</a>.</div>
             </div>
         </div>
     </div>

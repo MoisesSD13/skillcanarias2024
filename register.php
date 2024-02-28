@@ -1,11 +1,3 @@
-<?php
-    use Phppot\Member;
-    if (! empty($_POST["register-btn"])) {
-        require_once __DIR__ . '/lib/Member.php';
-        $member = new Member();
-        $registerResult = $member->registerMember();
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,27 +16,35 @@
                     <h1>Sign Up</h1>
                 </div>
                 <div class="">
-                    <input type="text" class="" placeholder="username"
-                        name="username">
+                    <input type="text" class="" placeholder="Nombre de Usuario"
+                        name="username" required>
                 </div>
                 <div class="">
-                    <input type="password" class="" placeholder="password"
-                        name="password">
+                    <input type="password" class="" placeholder="contraseña"
+                        name="password" required>
                 </div>
                 <div class="">
                     <input type="text" class="" placeholder="email"
-                        name="email">
+                        name="email" required>
                 </div>
                 <div class="">
-                    <input type="submit" value="Register"
+                    <input type="submit" value="Registrarse"
                         class="registerButton"
                         name="register-btn">
                 </div>
             </form>
+            <?php
+                use Phppot\Member;
+                if (! empty($_POST["register-btn"])) {
+                    require_once __DIR__ . '/lib/Member.php';
+                    $member = new Member();
+                    $registerResult = $member->registerMember();
+                }
+            ?>
             <?php if(!empty($registerResult)){?>
             <div class=""><?php echo $registerResult;?></div>
             <?php }?>
-            <div class="">If you are a registered user, <a href="./login.php">login here</a>.</div>
+            <div class="">Si ya tienes una cuenta, <a href="./login.php">pulsa aquí</a>.</div>
         </div>
     </body>
 </html>

@@ -24,6 +24,10 @@ a, a:visited, a:focus{
     text-align: center;
 }
 
+a:hover {
+    font-weight: bold;
+}
+
 header h1, a{
     user-select: none;
     padding: 10px 0;
@@ -68,4 +72,7 @@ header h1, a{
 .auxiliar-card{
     display: flex;
     flex-direction: column;
+}
+.error{
+    color: red;
 }

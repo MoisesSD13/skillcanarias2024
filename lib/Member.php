@@ -41,7 +41,7 @@ class Member
             $this->ds->insert($insertQuery, $insertParamType, $insertParamValue);
             echo "Usuario registrado exitosamente.";
         } else {
-            echo "El usuario ya existe.";
+            echo '<div class="error">El usuario ya existe.</div>';
         }
     }
 
