@@ -92,6 +92,7 @@ header h1, a{
     }
     .card img {
         width: 250px;
+        align-self: center;
     }
     header{
         flex-direction: column;
