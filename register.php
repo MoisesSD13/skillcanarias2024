@@ -1,11 +1,3 @@
-<?php
-    use Phppot\Member;
-    if (! empty($_POST["register-btn"])) {
-        require_once __DIR__ . '/lib/Member.php';
-        $member = new Member();
-        $registerResult = $member->registerMember();
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,6 +33,14 @@
                         name="register-btn">
                 </div>
             </form>
+            <?php
+                use Phppot\Member;
+                if (! empty($_POST["register-btn"])) {
+                    require_once __DIR__ . '/lib/Member.php';
+                    $member = new Member();
+                    $registerResult = $member->registerMember();
+                }
+            ?>
             <?php if(!empty($registerResult)){?>
             <div class=""><?php echo $registerResult;?></div>
             <?php }?>

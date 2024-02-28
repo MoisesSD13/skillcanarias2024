@@ -36,12 +36,12 @@ class Member
         if (empty($memberRecord)){
             $insertQuery = 'INSERT INTO usuario (nombreUsuario, contrasenaUsuario, email) VALUES (?, ?, ?)';
             $insertParamType = 'sss';
-            $insertParamValue = array($username, $password, $email);
+            $insertParamValue = array($username, password_hash($password, 0), $email);
             
             $this->ds->insert($insertQuery, $insertParamType, $insertParamValue);
             echo "Usuario registrado exitosamente.";
         } else {
-            echo "El usuario ya existe.";
+            echo '<div class="error">El usuario ya existe.</div>';
         }
     }
 
@@ -59,7 +59,7 @@ class Member
                 $loginPassword = 1;
             }
         } else {
-            $loginPassword = 0;
+                $loginPassword = 0;
         }
         if ($loginPassword == 1) {
             session_start();

@@ -52,3 +52,9 @@ a, a:visited, a:focus{
     text-decoration: none;
     text-align: center;
 }
+a:hover {
+    font-weight: bold;
+}
+.error{
+    color: red;
+}

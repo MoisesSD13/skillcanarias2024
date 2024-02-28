@@ -32,8 +32,8 @@ if (! empty($_POST["login-btn"])) {
             <form name="login" action="" method="post">
                 <h1>Iniciar sesión</h1>
                 <div class="">
-                    <input type="text" class="username" placeholder="Nombre de usuario"
-                        name="username">
+                    <input type="text" class="username" placeholder="Nombre de Usuario"
+                        name="username" required>
                 </div>
                 <div class="">
                     <div class="">
@@ -41,6 +41,8 @@ if (! empty($_POST["login-btn"])) {
                     </div>
                     <input type="password" class="" placeholder="Contraseña"
                         name="password">
+                    <input type="password" class="" placeholder="Contraseña"
+                        name="password" required>
                 </div>
                 <div class="">
                     <input type="submit" value="Iniciar sesión"
@@ -49,7 +51,7 @@ if (! empty($_POST["login-btn"])) {
                 </div>
             </form>
             <?php if(!empty($loginResult)){?>
-                <div class=""><?php echo $loginResult;?></div>
+                <div class="error"><?php echo $loginResult;?></div>
             <?php }?>
         <div class="">
             <div class="">
