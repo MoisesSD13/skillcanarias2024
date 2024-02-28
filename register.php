@@ -13,18 +13,18 @@
         <div class="form-container">
             <form name="register" action="" method="post">
                 <div class="">
-                    <h1>Sign Up</h1>
+                    <h1>Registro</h1>
                 </div>
                 <div class="">
                     <input type="text" class="" placeholder="Nombre de Usuario"
                         name="username" required>
                 </div>
                 <div class="">
-                    <input type="password" class="" placeholder="contraseña"
+                    <input type="password" class="" placeholder="Contraseña"
                         name="password" required>
                 </div>
                 <div class="">
-                    <input type="text" class="" placeholder="email"
+                    <input type="text" class="" placeholder="Email"
                         name="email" required>
                 </div>
                 <div class="">
