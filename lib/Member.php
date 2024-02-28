@@ -49,12 +49,13 @@ class Member
     {
         $memberRecord = $this->getMember($_POST["username"]);
         $loginPassword = 0;
+        $password = 0;
         if (! empty($memberRecord)) {
             if (! empty($_POST["password"])) {
                 $password = $_POST["password"];
             }
-            $loginPassword = 1;
-            if (strcmp($password, $memberRecor["password"])) {
+            $loginPassword = 0;
+            if (strcmp($password, $memberRecord[1])) {
                 $loginPassword = 1;
             }
         } else {
