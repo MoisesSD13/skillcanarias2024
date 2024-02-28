@@ -13,7 +13,7 @@
                         <strong>Aforo Máximo:</strong> 102.<br>
                         <strong>Aforo Mínimo:</strong> 70.
                     </p>
-                    <a href="./">Reservar sala</a>
+                    <a href="./formsala.php">Reservar sala</a>
                 </div>
             </div>
         </div>

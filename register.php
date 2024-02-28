@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Registro Hotel CanHome</title>
         <link rel="stylesheet" href="./src/register-style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +13,19 @@
         <div class="form-container">
             <form name="register" action="" method="post">
                 <div class="">
-                    <h1>Registro</h1>
+                    <h1>Registrarse</h1>
                 </div>
                 <div class="">
-                    <input type="text" class="" placeholder="Nombre de Usuario"
-                        name="username" required>
+                    <input type="text" class="" placeholder="Nombre de usuario"
+                        name="username">
                 </div>
                 <div class="">
                     <input type="password" class="" placeholder="Contraseña"
-                        name="password" required>
+                        name="password">
                 </div>
                 <div class="">
                     <input type="text" class="" placeholder="Email"
-                        name="email" required>
+                        name="email">
                 </div>
                 <div class="">
                     <input type="submit" value="Registrarse"

@@ -44,6 +44,7 @@ input{
 
 .loginButton{
     padding: 5px 15px;
+    cursor: pointer;
 }
 
 a, a:visited, a:focus{

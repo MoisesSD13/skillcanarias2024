@@ -11,7 +11,7 @@ if (! empty($_POST["login-btn"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Hotel CanHome</title>
     <link rel="stylesheet" href="./src/login-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@ if (! empty($_POST["login-btn"])) {
 
     <div class="form-container">
             <form name="login" action="" method="post">
-                <h1>Iniciar sesion</h1>
+                <h1>Iniciar sesión</h1>
                 <div class="">
                     <input type="text" class="username" placeholder="Nombre de Usuario"
                         name="username" required>
@@ -39,11 +39,13 @@ if (! empty($_POST["login-btn"])) {
                     <div class="">
                         <span class=""><i class=""></i></span>
                     </div>
+                    <inputgit type="password" class="" placeholder="Contraseña"
+                        name="password">
                     <input type="password" class="" placeholder="Contraseña"
                         name="password" required>
                 </div>
                 <div class="">
-                    <input type="submit" value="Iniciar Sesion"
+                    <input type="submit" value="Iniciar sesión"
                         class="loginButton"
                         name="login-btn">
                 </div>

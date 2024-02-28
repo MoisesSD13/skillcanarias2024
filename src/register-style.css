@@ -35,7 +35,7 @@ form{
     box-shadow: 2px 5px 15px rgb(145, 129, 77);
 }
 input{
-    font-size: large;
+    font-size: medium;
     margin-top: 25px;
     border-radius: 20px;
     text-align: center;
@@ -45,6 +45,7 @@ input{
 
 .registerButton{
     padding: 5px 15px;
+    cursor: pointer;
 }
 
 a, a:visited, a:focus{
