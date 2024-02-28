@@ -21,22 +21,22 @@
         <div class="form-container">
             <form name="register" action="" method="post">
                 <div class="">
-                    <h1>Sign Up</h1>
+                    <h1>Registrarse</h1>
                 </div>
                 <div class="">
-                    <input type="text" class="" placeholder="username"
+                    <input type="text" class="" placeholder="Nombre de usuario"
                         name="username">
                 </div>
                 <div class="">
-                    <input type="password" class="" placeholder="password"
+                    <input type="password" class="" placeholder="Contraseña"
                         name="password">
                 </div>
                 <div class="">
-                    <input type="text" class="" placeholder="email"
+                    <input type="text" class="" placeholder="Email"
                         name="email">
                 </div>
                 <div class="">
-                    <input type="submit" value="Register"
+                    <input type="submit" value="Registrarse"
                         class="registerButton"
                         name="register-btn">
                 </div>
@@ -44,7 +44,7 @@
             <?php if(!empty($registerResult)){?>
             <div class=""><?php echo $registerResult;?></div>
             <?php }?>
-            <div class="">If you are a registered user, <a href="./login.php">login here</a>.</div>
+            <div class="">Si ya tienes una cuenta, <a href="./login.php">pulsa aquí</a>.</div>
         </div>
     </body>
 </html>
