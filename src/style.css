@@ -48,7 +48,8 @@ header h1, a{
     border-radius: 25px;
     border: gray 2px solid;
     padding: 15px;
-    margin-bottom: 115px;    
+    margin-bottom: 50px;    
+    box-shadow: 2px 5px 15px rgb(145, 129, 77);
 }
 
 .card img{
