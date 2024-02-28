@@ -36,7 +36,7 @@ class Member
         if (empty($memberRecord)){
             $insertQuery = 'INSERT INTO usuario (nombreUsuario, contrasenaUsuario, email) VALUES (?, ?, ?)';
             $insertParamType = 'sss';
-            $insertParamValue = array($username, $password, $email);
+            $insertParamValue = array($username, password_hash($password, 0), $email);
             
             $this->ds->insert($insertQuery, $insertParamType, $insertParamValue);
             echo "Usuario registrado exitosamente.";
@@ -48,17 +48,22 @@ class Member
     public function loginMember()
     {
         $memberRecord = $this->getMember($_POST["username"]);
-        $loginPassword = 0;
         if (! empty($memberRecord)) {
             if (! empty($_POST["password"])) {
                 $password = $_POST["password"];
             }
-            $loginPassword = 1;
-            if (strcmp($password, $memberRecor["password"])) {
+            $query = 'SELECT contrasenaUsuario FROM usuario where nombreUsuario = ?';
+            $paramType = 's';
+            $paramValue = array(
+                $_POST["username"]
+            );
+            $memberRecord = $this->ds->select($query, $paramType, $paramValue);
+            $loginPassword = 0;
+            if (password_verify($password, $memberRecord[0]["contrasenaUsuario"])) {
                 $loginPassword = 1;
             }
         } else {
-            $loginPassword = 0;
+                $loginPassword = 0;
         }
         if ($loginPassword == 1) {
             session_start();

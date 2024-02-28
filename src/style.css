@@ -71,8 +71,16 @@ header h1, a{
 }
 .auxiliar-card{
     display: flex;
+    width: 100%;
     flex-direction: column;
+}
+.auxiliar-card a:hover{
+    text-decoration: underline;
 }
 .error{
     color: red;
+}
+.card-description {
+    font-size: large;
+    line-height: 50px;
 }
