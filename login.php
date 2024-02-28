@@ -39,7 +39,7 @@ if (! empty($_POST["login-btn"])) {
                     <div class="">
                         <span class=""><i class=""></i></span>
                     </div>
-                    <input type="password" class="" placeholder="Contraseña"
+                    <inputgit type="password" class="" placeholder="Contraseña"
                         name="password">
                     <input type="password" class="" placeholder="Contraseña"
                         name="password" required>
