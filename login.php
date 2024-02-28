@@ -32,7 +32,7 @@ if (! empty($_POST["login-btn"])) {
             <form name="login" action="" method="post">
                 <h1>Iniciar sesion</h1>
                 <div class="">
-                    <input type="text" class="" placeholder="username"
+                    <input type="text" class="username" placeholder="username"
                         name="username">
                 </div>
                 <div class="">
@@ -44,7 +44,7 @@ if (! empty($_POST["login-btn"])) {
                 </div>
                 <div class="">
                     <input type="submit" value="Login"
-                        class=""
+                        class="loginButton"
                         name="login-btn">
                 </div>
             </form>
