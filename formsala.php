@@ -20,12 +20,12 @@
                     name="invNum">
             </div>
             <div class="">
-                <input type="date" class="" placeholder="Fecha de evento"
-                    name="eventDate">
-            </div>
-            <div class="">
                 <input type="text" class="" placeholder="Nombre de evento"
                     name="eventName">
+            </div>
+            <div class="">
+                <input type="date" class="" placeholder="Fecha de evento"
+                    name="eventDate">
             </div>
             <div class="">
                 <input type="submit" value="Reservar"
