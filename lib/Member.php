@@ -14,7 +14,7 @@ class Member
 
     public function getMember($username)
     {
-        $query = 'SELECT * FROM tbl_member where username = ?';
+        $query = 'SELECT * FROM usuario where nombreUsuario = ?';
         $paramType = 's';
         $paramValue = array(
             $username
@@ -26,16 +26,17 @@ class Member
     public function registerMember(){
         $username = $_POST["username"];
         $password = $_POST["password"];
-        $query = 'SELECT * FROM tbl_member where username = ?';
+        $email = $_POST["email"];
+        $query = 'SELECT * FROM usuario where nombreUsuario = ?';
         $paramType = 's';
         $paramValue = array(
             $username
         );
         $memberRecord = $this->ds->select($query, $paramType, $paramValue);
         if (empty($memberRecord)){
-            $insertQuery = 'INSERT INTO tbl_member (username, password) VALUES (?, ?)';
-            $insertParamType = 'ss';
-            $insertParamValue = array($username, $password);
+            $insertQuery = 'INSERT INTO usuario (nombreUsuario, contrasenaUsuario, email) VALUES (?, ?, ?)';
+            $insertParamType = 'sss';
+            $insertParamValue = array($username, $password, $email);
             
             $this->ds->insert($insertQuery, $insertParamType, $insertParamValue);
             echo "Usuario registrado exitosamente.";
@@ -52,22 +53,19 @@ class Member
             if (! empty($_POST["password"])) {
                 $password = $_POST["password"];
             }
-            $hashedPassword = $memberRecord[0]["password"];
             $loginPassword = 1;
-        //     if (password_verify($password, $hashedPassword)) {
-        //         $loginPassword = 1;
-        //     }
-        // } else {
-        //     $loginPassword = 0;
+            if (strcmp($password, $memberRecor["password"])) {
+                $loginPassword = 1;
+            }
+        } else {
+            $loginPassword = 0;
         }
         if ($loginPassword == 1) {
-            // login sucess so store the member's username in
-            // the session
             session_start();
             $_SESSION["username"] = $memberRecord[0]["username"];
             $_SESSION["name"] = $memberRecord[0]["name"];
             session_write_close();
-            $url = "home.php";
+            $url = "index.php";
             header("Location: $url");
         } else if ($loginPassword == 0) {
             $loginStatus = "Invalid username or password.";

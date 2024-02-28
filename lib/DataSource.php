@@ -23,7 +23,7 @@ class DataSource
 
     const PASSWORD = '';
 
-    const DATABASENAME = 'bbddskill';
+    const DATABASENAME = 'hotelbd';
 
     private $conn;
 
